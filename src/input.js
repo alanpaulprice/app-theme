@@ -1,8 +1,16 @@
+const Color = require('color');
+
+const colors = {
+  grey: Color('hsl(0, 0%, 10%)')
+    .hex()
+    .toString()
+};
+
 module.exports = {
   name: 'app-theme',
   type: 'dark',
   colors: {
-    'editor.background': '#263238',
+    'editor.background': colors.grey,
     'editor.foreground': '#eeffff',
     'activityBarBadge.background': '#007acc',
     'sideBarTitle.foreground': '#bbbbbb'
