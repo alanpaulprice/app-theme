@@ -1,7 +1,10 @@
 const fse = require('fs-extra');
-const theme = require('../src/input.js');
+const input = require('../src/input');
 
-fse.writeFile('./themes/output.json', JSON.stringify(theme), error => {
-  if (error) throw error;
-  console.log('File successfully written');
-});
+fse.writeFile(
+  './themes/app-theme-color-theme.json',
+  JSON.stringify(input),
+  error => {
+    if (error) throw error;
+  }
+);
