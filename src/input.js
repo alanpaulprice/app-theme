@@ -1,7 +1,37 @@
 const Color = require('color');
 
 const colors = {
-  grey: Color('hsl(0, 0%, 10%)')
+  grey_10: Color('hsl(0, 0%, 10%)')
+    .hex()
+    .toString(),
+  grey_80: Color('hsl(0, 0%, 80%)')
+    .hex()
+    .toString(),
+  white: Color('hsl(0, 0%, 100%)')
+    .hex()
+    .toString(),
+  red_80_50: Color('hsl(0, 80%, 50%)')
+    .hex()
+    .toString(),
+  red_50_50: Color('hsl(0, 50%, 50%)')
+    .hex()
+    .toString(),
+  red_100_75: Color('hsl(0, 100%, 75%)')
+    .hex()
+    .toString(),
+  green_25_50: Color('hsl(90, 25%, 50%)')
+    .hex()
+    .toString(),
+  green_50_50: Color('hsl(90, 50%, 50%)')
+    .hex()
+    .toString(),
+  green_75_25: Color('hsl(90, 75%, 25%)')
+    .hex()
+    .toString(),
+  green_100_90: Color('hsl(90, 100%, 90%)')
+    .hex()
+    .toString(),
+  brown_75_35: Color('hsl(30, 75%, 35%)')
     .hex()
     .toString()
 };
@@ -10,10 +40,10 @@ module.exports = {
   name: 'app-theme',
   type: 'dark',
   colors: {
-    'editor.background': colors.grey,
-    'editor.foreground': '#eeffff',
-    'activityBarBadge.background': '#007acc',
-    'sideBarTitle.foreground': '#bbbbbb'
+    'editor.background': colors.grey_10,
+    'editor.foreground': colors.white,
+    'activityBarBadge.background': colors.red_50_50,
+    'sideBarTitle.foreground': colors.grey_80
   },
   tokenColors: [
     {
@@ -21,35 +51,35 @@ module.exports = {
       scope: ['comment', 'punctuation.definition.comment'],
       settings: {
         fontStyle: 'italic',
-        foreground: '#546E7A'
+        foreground: colors.green_75_25
       }
     },
     {
       name: 'Variables',
       scope: ['variable', 'string constant.other.placeholder'],
       settings: {
-        foreground: '#EEFFFF'
+        foreground: colors.white
       }
     },
     {
       name: 'Colors',
       scope: ['constant.other.color'],
       settings: {
-        foreground: '#ffffff'
+        foreground: colors.white
       }
     },
     {
       name: 'Invalid',
       scope: ['invalid', 'invalid.illegal'],
       settings: {
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
       name: 'Keyword, Storage',
       scope: ['keyword', 'storage.type', 'storage.modifier'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -69,14 +99,14 @@ module.exports = {
         'keyword.other.substitution'
       ],
       settings: {
-        foreground: '#89DDFF'
+        foreground: colors.brown_75_35
       }
     },
     {
       name: 'Tag',
       scope: ['entity.name.tag', 'meta.tag.sgml', 'markup.deleted.git_gutter'],
       settings: {
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -89,21 +119,21 @@ module.exports = {
         'keyword.other.special-method'
       ],
       settings: {
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
       name: 'Block Level Variables',
       scope: ['meta.block variable.other'],
       settings: {
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
       name: 'Other Variable, String Link',
       scope: ['support.other.variable', 'string.other.link'],
       settings: {
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -119,7 +149,7 @@ module.exports = {
         'keyword.other'
       ],
       settings: {
-        foreground: '#F78C6C'
+        foreground: colors.red_100_75
       }
     },
     {
@@ -182,7 +212,7 @@ module.exports = {
         'variable.other.class.js'
       ],
       settings: {
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
@@ -190,7 +220,7 @@ module.exports = {
       scope: ['variable.language'],
       settings: {
         fontStyle: 'italic',
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
@@ -198,7 +228,7 @@ module.exports = {
       scope: ['entity.name.method.js'],
       settings: {
         fontStyle: 'italic',
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
@@ -208,14 +238,14 @@ module.exports = {
         'variable.function.constructor'
       ],
       settings: {
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
       name: 'Attributes',
       scope: ['entity.other.attribute-name'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -240,7 +270,7 @@ module.exports = {
       name: "CSS ID's",
       scope: ['source.sass keyword.control'],
       settings: {
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
@@ -254,28 +284,28 @@ module.exports = {
       name: 'Deleted',
       scope: ['markup.deleted'],
       settings: {
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
       name: 'Changed',
       scope: ['markup.changed'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
       name: 'Regular Expressions',
       scope: ['string.regexp'],
       settings: {
-        foreground: '#89DDFF'
+        foreground: colors.brown_75_35
       }
     },
     {
       name: 'Escape Characters',
       scope: ['constant.character.escape'],
       settings: {
-        foreground: '#89DDFF'
+        foreground: colors.brown_75_35
       }
     },
     {
@@ -293,7 +323,7 @@ module.exports = {
       ],
       settings: {
         fontStyle: 'italic',
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
@@ -303,7 +333,7 @@ module.exports = {
       ],
       settings: {
         fontStyle: 'italic',
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
@@ -312,7 +342,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -330,7 +360,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#F78C6C'
+        foreground: colors.red_100_75
       }
     },
     {
@@ -339,7 +369,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#FF5370'
+        foreground: colors.green_50_50
       }
     },
     {
@@ -357,7 +387,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
@@ -366,7 +396,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -375,7 +405,7 @@ module.exports = {
         'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json'
       ],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -394,14 +424,14 @@ module.exports = {
         'punctuation.definition.list_item.markdown'
       ],
       settings: {
-        foreground: '#EEFFFF'
+        foreground: colors.white
       }
     },
     {
       name: 'Markdown - Markup Raw Inline',
       scope: ['text.html.markdown markup.inline.raw.markdown'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -429,7 +459,7 @@ module.exports = {
       scope: ['markup.italic'],
       settings: {
         fontStyle: 'italic',
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -437,7 +467,7 @@ module.exports = {
       scope: ['markup.bold', 'markup.bold string'],
       settings: {
         fontStyle: 'bold',
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -452,7 +482,7 @@ module.exports = {
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: '#f07178'
+        foreground: colors.green_25_50
       }
     },
     {
@@ -460,7 +490,7 @@ module.exports = {
       scope: ['markup.underline'],
       settings: {
         fontStyle: 'underline',
-        foreground: '#F78C6C'
+        foreground: colors.red_100_75
       }
     },
     {
@@ -481,14 +511,14 @@ module.exports = {
       name: 'Markdown - Link',
       scope: ['string.other.link.title.markdown'],
       settings: {
-        foreground: '#82AAFF'
+        foreground: colors.red_80_50
       }
     },
     {
       name: 'Markdown - Link Description',
       scope: ['string.other.link.description.title.markdown'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -502,7 +532,7 @@ module.exports = {
       name: 'Markup - Raw Block',
       scope: ['markup.raw.block'],
       settings: {
-        foreground: '#C792EA'
+        foreground: colors.green_100_90
       }
     },
     {
@@ -527,7 +557,7 @@ module.exports = {
         'punctuation.section.class.end'
       ],
       settings: {
-        foreground: '#EEFFFF'
+        foreground: colors.white
       }
     },
     {
@@ -549,7 +579,7 @@ module.exports = {
       name: 'Markup - Table',
       scope: ['markup.table'],
       settings: {
-        foreground: '#EEFFFF'
+        foreground: colors.white
       }
     }
   ]
