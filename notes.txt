@@ -1,0 +1,8 @@
+https://css-tricks.com/creating-a-vs-code-theme/#article-header-id-1
+https://code.visualstudio.com/api/extension-guides/color-theme
+https://code.visualstudio.com/api/references/theme-color
+https://code.visualstudio.com/api/extension-guides/color-theme#create-a-new-color-theme
+https://www.npmjs.com/package/json-variables
+
+http://code.visualstudio.com/docs/languages/markdown
+https://help.github.com/articles/markdown-basics/
