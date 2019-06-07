@@ -14,7 +14,7 @@
       {
         "label": "app-theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/app-theme-color-theme.json"
+        "path": "./themes/app-theme.json"
       }
     ]
   },
