@@ -3,4 +3,6 @@
 .gitignore
 vsc-extension-quickstart.md
 notes.txt
-src
+src/**
+scripts/**
+node_modules/**
